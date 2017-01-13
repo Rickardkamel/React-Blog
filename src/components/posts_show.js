@@ -14,5 +14,8 @@ class PostsShow extends Component {
     };
 }
 
+function mapStateToProps(state) {
+    return { post: state.posts.post };
+}
 
-export default connect(null, { fetchPost })(PostsShow);
+export default connect(mapStateToProps, { fetchPost })(PostsShow);
